@@ -80,10 +80,9 @@ const equipmentData = ref(null);
 const equipmentOptions = ref(null);
 
 const setupCharts = () => {
-    const documentStyle = getComputedStyle(document.documentElement);
-    const textColor = documentStyle.getPropertyValue('--text-primary') || '#F9FAFB';
-    const textColorSecondary = documentStyle.getPropertyValue('--text-muted') || '#6B7280';
-    const surfaceBorder = documentStyle.getPropertyValue('--surface-border') || '#1E2A3B';
+    const textColor = '#6B7280';
+    const textColorSecondary = '#6B7280';
+    const surfaceBorder = 'rgba(128, 128, 128, 0.15)';
 
     dischargeData.value = {
         labels: ['Cardiology', 'Orthopedics', 'Neurology', 'Oncology', 'Emergency', 'Pediatrics'],

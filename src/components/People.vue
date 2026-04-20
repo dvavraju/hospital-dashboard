@@ -42,10 +42,9 @@ const getAttendanceColor = (att) => {
 };
 
 const setupCharts = () => {
-    const documentStyle = getComputedStyle(document.documentElement);
-    const textColor = documentStyle.getPropertyValue('--text-primary') || '#F9FAFB';
-    const textColorSecondary = documentStyle.getPropertyValue('--text-muted') || '#6B7280';
-    const surfaceBorder = documentStyle.getPropertyValue('--surface-border') || '#1E2A3B';
+    const textColor = '#6B7280';
+    const textColorSecondary = '#6B7280';
+    const surfaceBorder = 'rgba(128, 128, 128, 0.15)';
 
     staffUtilData.value = {
         labels: ['ICU', 'Emergency', 'OPD', 'Cardiology', 'Orthopedics', 'Radiology', 'Pediatrics', 'Oncology'],

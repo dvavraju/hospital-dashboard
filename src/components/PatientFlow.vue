@@ -34,11 +34,10 @@ const getStatusSeverity = (status) => {
 };
 
 const setupCharts = () => {
-    const documentStyle = getComputedStyle(document.documentElement);
-    const textColor = documentStyle.getPropertyValue('--text-primary') || '#F9FAFB';
-    const textColorSecondary = documentStyle.getPropertyValue('--text-muted') || '#6B7280';
-    const surfaceBorder = documentStyle.getPropertyValue('--surface-border') || '#1E2A3B';
-    const cardBg = documentStyle.getPropertyValue('--card-bg') || '#0B0F1A';
+    const textColor = '#6B7280';
+    const textColorSecondary = '#6B7280';
+    const surfaceBorder = 'rgba(128, 128, 128, 0.15)';
+    const cardBg = 'transparent';
 
     // Patient Inflow Trend (Area chart - last 30 days)
     const labels30 = Array.from({ length: 30 }, (_, i) => `Apr ${i + 1}`);
@@ -93,7 +92,7 @@ const setupCharts = () => {
             data: [35, 25, 18, 12, 10],
             backgroundColor: ['#00C2FF', '#7C3AED', '#10B981', '#F59E0B', '#EF4444'],
             hoverBackgroundColor: ['#00aae6', '#6b2ed1', '#0e9d6d', '#e09003', '#dc3838'],
-            borderColor: cardBg,
+            borderColor: 'transparent', borderWidth: 0,
             borderWidth: 2
         }]
     };

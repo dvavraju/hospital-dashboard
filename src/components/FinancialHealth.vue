@@ -40,10 +40,9 @@ const getStatusSeverity = (status) => {
 };
 
 const setupCharts = () => {
-    const documentStyle = getComputedStyle(document.documentElement);
-    const textColor = documentStyle.getPropertyValue('--text-primary') || '#F9FAFB';
-    const textColorSecondary = documentStyle.getPropertyValue('--text-muted') || '#6B7280';
-    const surfaceBorder = documentStyle.getPropertyValue('--surface-border') || '#1E2A3B';
+    const textColor = '#6B7280';
+    const textColorSecondary = '#6B7280';
+    const surfaceBorder = 'rgba(128, 128, 128, 0.15)';
 
     revenueData.value = {
         labels: ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
@@ -125,7 +124,7 @@ const setupCharts = () => {
                 data: [40, 20, 15, 15, 10],
                 backgroundColor: ['#00C2FF', '#7C3AED', '#EF4444', '#F59E0B', '#10B981'],
                 hoverBackgroundColor: ['#00aae6', '#6b2ed1', '#dc3838', '#e09003', '#0e9d6d'],
-                borderColor: surfaceBorder
+                borderColor: 'transparent', borderWidth: 0
             }
         ]
     };
