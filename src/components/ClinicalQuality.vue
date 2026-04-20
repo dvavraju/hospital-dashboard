@@ -68,9 +68,10 @@ const getStatusSeverity = (status) => {
 };
 
 const setupCharts = () => {
-    const textColor = '#F9FAFB';
-    const textColorSecondary = '#6B7280';
-    const surfaceBorder = '#1E2A3B';
+    const documentStyle = getComputedStyle(document.documentElement);
+    const textColor = documentStyle.getPropertyValue('--text-primary') || '#F9FAFB';
+    const textColorSecondary = documentStyle.getPropertyValue('--text-muted') || '#6B7280';
+    const surfaceBorder = documentStyle.getPropertyValue('--surface-border') || '#1E2A3B';
 
     trendData.value = {
         labels: ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
@@ -142,8 +143,10 @@ const setupCharts = () => {
 
 onMounted(() => {
     generateHeatmap();
-    setupCharts();
-    setTimeout(() => { loading.value = false; }, 800);
+    setTimeout(() => {
+        setupCharts();
+        loading.value = false;
+    }, 200);
 });
 </script>
 
@@ -220,7 +223,7 @@ onMounted(() => {
 
     <!-- ROW 2 — Quality Trends + Incident Heatmap -->
     <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
-        <Card class="glass-card" style="flex: 1 1 55%; min-width: 0;">
+        <Card class="glass-card" style="flex: 1 1 70%; min-width: 0;">
             <template #title><span style="font-size: 1.1rem; color: var(--text-primary);">Quality Indicators Trend</span></template>
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="320px" /></div>
@@ -229,7 +232,7 @@ onMounted(() => {
                 </div>
             </template>
         </Card>
-        <Card class="glass-card" style="flex: 1 1 40%; min-width: 0;">
+        <Card class="glass-card" style="flex: 1 1 25%; min-width: 0;">
             <template #title><span style="font-size: 1.1rem; color: var(--text-primary);">Incident Heatmap (90 Days)</span></template>
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="320px" /></div>
@@ -286,7 +289,7 @@ onMounted(() => {
                 <Column header="Assigned To">
                     <template #body="slotProps">
                         <div style="display: flex; align-items: center; gap: 8px;">
-                            <Avatar :label="slotProps.data.avatar" size="small" shape="circle" style="background: var(--accent-primary); color: var(--bg-color); font-size: 0.65rem;" />
+                            <Avatar :label="slotProps.data.avatar" size="small" shape="circle" style="background: var(--surface-border); color: var(--text-primary); font-size: 0.65rem;" />
                             <span style="font-size: 0.85rem;">{{ slotProps.data.assignedTo }}</span>
                         </div>
                     </template>

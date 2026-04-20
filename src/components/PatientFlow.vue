@@ -34,9 +34,11 @@ const getStatusSeverity = (status) => {
 };
 
 const setupCharts = () => {
-    const textColor = '#F9FAFB';
-    const textColorSecondary = '#6B7280';
-    const surfaceBorder = '#1E2A3B';
+    const documentStyle = getComputedStyle(document.documentElement);
+    const textColor = documentStyle.getPropertyValue('--text-primary') || '#F9FAFB';
+    const textColorSecondary = documentStyle.getPropertyValue('--text-muted') || '#6B7280';
+    const surfaceBorder = documentStyle.getPropertyValue('--surface-border') || '#1E2A3B';
+    const cardBg = documentStyle.getPropertyValue('--card-bg') || '#0B0F1A';
 
     // Patient Inflow Trend (Area chart - last 30 days)
     const labels30 = Array.from({ length: 30 }, (_, i) => `Apr ${i + 1}`);
@@ -91,7 +93,8 @@ const setupCharts = () => {
             data: [35, 25, 18, 12, 10],
             backgroundColor: ['#00C2FF', '#7C3AED', '#10B981', '#F59E0B', '#EF4444'],
             hoverBackgroundColor: ['#00aae6', '#6b2ed1', '#0e9d6d', '#e09003', '#dc3838'],
-            borderColor: '#1E2A3B'
+            borderColor: cardBg,
+            borderWidth: 2
         }]
     };
 
@@ -128,6 +131,7 @@ const setupCharts = () => {
 
     readmissionOptions.value = {
         maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
         plugins: {
             legend: { labels: { color: textColor, usePointStyle: true } }
         },
@@ -139,8 +143,11 @@ const setupCharts = () => {
 };
 
 onMounted(() => {
-    setupCharts();
-    setTimeout(() => { loading.value = false; }, 800);
+    // Small delay to ensure styles are attached
+    setTimeout(() => {
+        setupCharts();
+        loading.value = false;
+    }, 200);
 });
 </script>
 

@@ -42,9 +42,10 @@ const getAttendanceColor = (att) => {
 };
 
 const setupCharts = () => {
-    const textColor = '#F9FAFB';
-    const textColorSecondary = '#6B7280';
-    const surfaceBorder = '#1E2A3B';
+    const documentStyle = getComputedStyle(document.documentElement);
+    const textColor = documentStyle.getPropertyValue('--text-primary') || '#F9FAFB';
+    const textColorSecondary = documentStyle.getPropertyValue('--text-muted') || '#6B7280';
+    const surfaceBorder = documentStyle.getPropertyValue('--surface-border') || '#1E2A3B';
 
     staffUtilData.value = {
         labels: ['ICU', 'Emergency', 'OPD', 'Cardiology', 'Orthopedics', 'Radiology', 'Pediatrics', 'Oncology'],
@@ -90,6 +91,7 @@ const setupCharts = () => {
                 borderDash: [5, 5],
                 data: [280, 280, 280, 280, 280, 280],
                 pointRadius: 0,
+                order: 1,
                 fill: false
             }
         ]
@@ -108,8 +110,10 @@ const setupCharts = () => {
 };
 
 onMounted(() => {
-    setupCharts();
-    setTimeout(() => { loading.value = false; }, 800);
+    setTimeout(() => {
+        setupCharts();
+        loading.value = false;
+    }, 200);
 });
 </script>
 
@@ -183,7 +187,7 @@ onMounted(() => {
                     <template #body="slotProps">
                         <div style="display: flex; align-items: center; gap: 10px;">
                             <Avatar :label="slotProps.data.avatar" size="small" shape="circle" 
-                                style="background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); color: white; font-size: 0.65rem; font-weight: 600;" />
+                                style="background: var(--surface-border); color: var(--text-primary); font-size: 0.65rem; font-weight: 600;" />
                             <span style="font-weight: 500;">{{ slotProps.data.name }}</span>
                         </div>
                     </template>

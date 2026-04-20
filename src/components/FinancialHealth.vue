@@ -67,6 +67,7 @@ const setupCharts = () => {
                 borderWidth: 2,
                 fill: false,
                 tension: 0.4,
+                order: 1,
                 data: [1.3, 1.4, 1.1, 1.9, 1.3, 2.1]
             }
         ]
@@ -185,22 +186,25 @@ onMounted(() => {
                 <div v-else>
                     <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">ACCOUNTS REC.</div>
                     <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">₹1.4 Cr</div>
-                    <div style="display: flex; gap: 4px; overflow-x: auto;">
-                        <Chip label="<30d" style="font-size: 0.65rem; background: rgba(16, 185, 129, 0.2); color: var(--success);" />
-                        <Chip label="30-60d" style="font-size: 0.65rem; background: rgba(245, 158, 11, 0.2); color: var(--warning);" />
-                        <Chip label="60d+" style="font-size: 0.65rem; background: rgba(239, 68, 68, 0.2); color: var(--danger);" />
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <span style="font-size: 0.72rem; color: var(--success);">&lt;30d</span>
+                        <span style="font-size: 0.72rem; color: var(--warning);">30-60d</span>
+                        <span style="font-size: 0.72rem; color: var(--danger);">60d+</span>
                     </div>
                 </div>
             </template>
         </Card>
 
-        <Card class="glass-card accent-border-red" style="padding: 0; position: relative;">
+        <Card class="glass-card accent-border-red">
             <template #content>
-                <div v-if="loading" style="display: flex; justify-content: center; height: 100px; align-items: center;"><Skeleton shape="circle" size="4rem" /></div>
-                <div v-else style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                    <div class="text-muted" style="font-size: 0.75rem; font-weight: 500; position: absolute; top: 12px; left: 16px;">DENIAL RATE ⚠</div>
-                    <Knob v-model="claimDenialValue" :min="0" :max="10" readonly valueColor="var(--danger)" rangeColor="var(--surface-border)" :size="60" style="margin-top: 10px;" />
-                    <span class="text-muted" style="font-size: 0.75rem; margin-top: -5px;">Bench: &lt;3%</span>
+                <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
+                <div v-else style="display: flex; align-items: flex-start; justify-content: space-between;">
+                    <div>
+                        <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">DENIAL RATE</div>
+                        <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0; color: var(--danger);" class="mono-data">4.2%</div>
+                        <div class="text-muted" style="font-size: 0.72rem;">Bench: &lt;3%</div>
+                    </div>
+                    <Knob v-model="claimDenialValue" :min="0" :max="10" readonly valueColor="var(--danger)" rangeColor="var(--surface-border)" :size="48" :strokeWidth="8" />
                 </div>
             </template>
         </Card>

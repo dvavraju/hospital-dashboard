@@ -123,13 +123,13 @@ onUnmounted(() => {
     <div :class="['sidebar', { 'collapsed': isSidebarCollapsed }]">
         <div style="padding: 1.25rem 1rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--surface-border);">
             <div style="display: flex; align-items: center; gap: 10px; overflow: hidden;" v-if="!isSidebarCollapsed">
-                <img :src="logoImg" style="width: 38px; height: 38px; object-fit: contain; flex-shrink: 0;" alt="ROV Logo" />
+                <img :src="logoImg" style="width: 48px; height: 48px; object-fit: contain; flex-shrink: 0;" alt="ROV Logo" />
                 <div>
-                    <h3 style="margin: 0; white-space: nowrap; font-size: 0.95rem; color: var(--text-primary);">ROV</h3>
+                    <h3 style="margin: 0; white-space: nowrap; font-size: 1.05rem; color: var(--text-primary);">ROV</h3>
                     <span style="font-size: 0.65rem; color: var(--text-muted);">Hospital Group</span>
                 </div>
             </div>
-            <img v-else :src="logoImg" style="width: 32px; height: 32px; object-fit: contain; margin: 0 auto;" alt="ROV Logo" />
+            <img v-else :src="logoImg" style="width: 42px; height: 42px; object-fit: contain; margin: 0 auto;" alt="ROV Logo" />
             
             <i v-if="!isSidebarCollapsed" class="pi pi-bars text-muted" style="cursor: pointer; font-size: 1.1rem; transition: color 0.2s;" @click="isSidebarCollapsed = !isSidebarCollapsed"></i>
         </div>
@@ -147,9 +147,20 @@ onUnmounted(() => {
             </div>
         </div>
 
-        <!-- Collapse toggle at bottom -->
-        <div v-if="isSidebarCollapsed" style="padding: 1rem; border-top: 1px solid var(--surface-border); text-align: center;">
-            <i class="pi pi-angle-double-right text-muted" style="cursor: pointer; font-size: 1.1rem; transition: color 0.2s;" @click="isSidebarCollapsed = false"></i>
+        <!-- Bottom Info Area (Clock & Collapse Toggle) -->
+        <div style="margin-top: auto; border-top: 1px solid var(--surface-border); display: flex; flex-direction: column;">
+            
+            <div v-if="!isSidebarCollapsed" style="padding: 1rem; text-align: center; background: var(--hover-bg); border-bottom: 1px solid var(--surface-border);">
+                <div style="font-family: var(--font-display); font-weight: 600; font-size: 0.85rem; color: var(--text-primary); letter-spacing: 0.5px;">{{ currentTime.split(',')[0] }}</div>
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">{{ currentTime.split(',')[1] }}</div>
+            </div>
+            
+            <div v-if="isSidebarCollapsed" style="padding: 1rem; text-align: center; cursor: pointer;" @click="isSidebarCollapsed = false">
+                <i class="pi pi-angle-double-right text-muted" style="font-size: 1.1rem; transition: color 0.2s;"></i>
+            </div>
+            <div v-else style="padding: 0.75rem; text-align: center; cursor: pointer;" @click="isSidebarCollapsed = true">
+                <i class="pi pi-angle-double-left text-muted" style="font-size: 1.1rem; transition: color 0.2s;"></i>
+            </div>
         </div>
     </div>
     
@@ -159,7 +170,6 @@ onUnmounted(() => {
         <div class="topbar">
             <div>
                 <h2 style="margin:0; font-size: 1.2rem; font-weight: 700; letter-spacing: -0.3px;">Executive Dashboard</h2>
-                <div class="mono-data text-muted" style="font-size: 0.78rem; margin-top: 3px;">{{ currentTime }}</div>
             </div>
             
             <div style="display: flex; align-items: center; gap: 1.25rem;">

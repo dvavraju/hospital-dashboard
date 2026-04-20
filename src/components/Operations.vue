@@ -80,9 +80,10 @@ const equipmentData = ref(null);
 const equipmentOptions = ref(null);
 
 const setupCharts = () => {
-    const textColor = '#F9FAFB';
-    const textColorSecondary = '#6B7280';
-    const surfaceBorder = '#1E2A3B';
+    const documentStyle = getComputedStyle(document.documentElement);
+    const textColor = documentStyle.getPropertyValue('--text-primary') || '#F9FAFB';
+    const textColorSecondary = documentStyle.getPropertyValue('--text-muted') || '#6B7280';
+    const surfaceBorder = documentStyle.getPropertyValue('--surface-border') || '#1E2A3B';
 
     dischargeData.value = {
         labels: ['Cardiology', 'Orthopedics', 'Neurology', 'Oncology', 'Emergency', 'Pediatrics'],
@@ -136,8 +137,10 @@ const setupCharts = () => {
 
 onMounted(() => {
     generateBeds();
-    setupCharts();
-    setTimeout(() => { loading.value = false; }, 800);
+    setTimeout(() => {
+        setupCharts();
+        loading.value = false;
+    }, 200);
 });
 </script>
 
@@ -148,10 +151,12 @@ onMounted(() => {
         <Card class="glass-card accent-border-cyan">
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
-                <div v-else style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                    <div class="text-muted" style="font-size: 0.75rem; font-weight: 500; align-self: flex-start;">BED OCCUPANCY</div>
-                    <Knob v-model="bedOccupancy" :min="0" :max="100" readonly valueColor="#00C2FF" rangeColor="#1E2A3B" :size="70" valueTemplate="{value}%" />
-                    <span class="text-muted" style="font-size: 0.75rem;">Target: 85%</span>
+                <div v-else>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">BED OCCUPANCY</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0; color: var(--accent-primary);" class="mono-data">{{ bedOccupancy }}<span style="font-size: 0.9rem; color: var(--text-muted);">%</span></div>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <span class="text-muted" style="font-size: 0.75rem;">Target: 85%</span>
+                    </div>
                 </div>
             </template>
         </Card>
@@ -335,12 +340,13 @@ onMounted(() => {
 .ot-slot {
     flex: 1 1 calc(50% - 8px);
     min-width: 140px;
-    background: rgba(0,0,0,0.25);
+    background: var(--strip-bg);
     padding: 8px 10px;
     border-radius: 6px;
+    border: 1px solid var(--surface-border);
     transition: background 0.2s;
 }
 .ot-slot:hover {
-    background: rgba(255,255,255,0.05);
+    background: var(--hover-bg);
 }
 </style>
