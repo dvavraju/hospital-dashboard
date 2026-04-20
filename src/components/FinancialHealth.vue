@@ -83,10 +83,10 @@ const setupCharts = () => {
             y: { ticks: { color: textColorSecondary }, grid: { color: surfaceBorder } },
             y1: { 
                 type: 'linear', 
-                display: false, // hide the axis labels to keep it clean
+                display: false,
                 position: 'right', 
                 min: 0, 
-                max: 3.5, // lower max brings the line up
+                max: 2.4, // tight max pushes the line to the top of the chart
                 grid: { drawOnChartArea: false } 
             }
         }
