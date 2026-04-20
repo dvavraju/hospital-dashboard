@@ -68,6 +68,7 @@ const setupCharts = () => {
                 fill: false,
                 tension: 0.4,
                 order: 1,
+                yAxisID: 'y1',
                 data: [1.3, 1.4, 1.1, 1.9, 1.3, 2.1]
             }
         ]
@@ -80,7 +81,15 @@ const setupCharts = () => {
         },
         scales: {
             x: { ticks: { color: textColorSecondary }, grid: { color: surfaceBorder } },
-            y: { ticks: { color: textColorSecondary }, grid: { color: surfaceBorder } }
+            y: { ticks: { color: textColorSecondary }, grid: { color: surfaceBorder } },
+            y1: { 
+                type: 'linear', 
+                display: false, // hide the axis labels to keep it clean
+                position: 'right', 
+                min: 0, 
+                max: 3.5, // lower max brings the line up
+                grid: { drawOnChartArea: false } 
+            }
         }
     };
 
