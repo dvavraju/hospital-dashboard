@@ -14,6 +14,8 @@ import ClinicalQuality from './components/ClinicalQuality.vue';
 import Compliance from './components/Compliance.vue';
 import People from './components/People.vue';
 
+import logoImg from './assets/logo.png';
+
 const toast = useToast();
 
 const branches = ref([
@@ -121,17 +123,13 @@ onUnmounted(() => {
     <div :class="['sidebar', { 'collapsed': isSidebarCollapsed }]">
         <div style="padding: 1.25rem 1rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--surface-border);">
             <div style="display: flex; align-items: center; gap: 10px; overflow: hidden;" v-if="!isSidebarCollapsed">
-                <div style="width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                    <i class="pi pi-building" style="font-size: 1rem; color: white;"></i>
-                </div>
+                <img :src="logoImg" style="width: 38px; height: 38px; object-fit: contain; flex-shrink: 0;" alt="ROV Logo" />
                 <div>
-                    <h3 style="margin: 0; white-space: nowrap; font-size: 0.95rem; color: var(--text-primary);">Apollo MS</h3>
+                    <h3 style="margin: 0; white-space: nowrap; font-size: 0.95rem; color: var(--text-primary);">ROV</h3>
                     <span style="font-size: 0.65rem; color: var(--text-muted);">Hospital Group</span>
                 </div>
             </div>
-            <div v-else style="width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-                <i class="pi pi-building" style="font-size: 1rem; color: white;"></i>
-            </div>
+            <img v-else :src="logoImg" style="width: 32px; height: 32px; object-fit: contain; margin: 0 auto;" alt="ROV Logo" />
             
             <i v-if="!isSidebarCollapsed" class="pi pi-bars text-muted" style="cursor: pointer; font-size: 1.1rem; transition: color 0.2s;" @click="isSidebarCollapsed = !isSidebarCollapsed"></i>
         </div>
