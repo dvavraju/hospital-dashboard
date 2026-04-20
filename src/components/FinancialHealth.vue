@@ -66,7 +66,7 @@ const setupCharts = () => {
                 borderWidth: 2,
                 fill: false,
                 tension: 0.4,
-                order: 1,
+                order: -1,
                 yAxisID: 'y1',
                 data: [1.3, 1.4, 1.1, 1.9, 1.3, 2.1]
             }

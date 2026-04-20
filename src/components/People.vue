@@ -90,7 +90,7 @@ const setupCharts = () => {
                 borderDash: [5, 5],
                 data: [280, 280, 280, 280, 280, 280],
                 pointRadius: 0,
-                order: 1,
+                order: -1,
                 fill: false
             }
         ]
