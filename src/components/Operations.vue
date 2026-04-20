@@ -277,7 +277,7 @@ onMounted(() => {
                                 :style="{ borderLeft: '3px solid ' + getSlotColor(slot.status) }"
                             >
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                                    <span class="mono-data" style="font-size: 0.75rem; color: var(--text-muted);">{{ slot.time }}</span>
+                                    <span style="font-size: 0.75rem; color: var(--text-muted);">{{ slot.time }}</span>
                                     <Tag :value="slot.status" :severity="getSlotSeverity(slot.status)" style="font-size: 0.65rem; padding: 2px 6px;" />
                                 </div>
                                 <div style="font-size: 0.8rem; font-weight: 500;">{{ slot.procedure }}</div>

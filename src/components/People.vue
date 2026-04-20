@@ -193,25 +193,25 @@ onMounted(() => {
                     </template>
                 </Column>
                 <Column field="specialty" header="Specialty"></Column>
-                <Column field="opd" header="OPD" sortable class="mono-data"></Column>
-                <Column field="ipd" header="IPD" sortable class="mono-data"></Column>
+                <Column field="opd" header="OPD" sortable></Column>
+                <Column field="ipd" header="IPD" sortable></Column>
                 <Column header="Revenue" sortable field="revenue">
                     <template #body="slotProps">
-                        <span class="mono-data" :style="{ color: getRevenueColor(slotProps.data.revenue) }">
+                        <span :style="{ color: getRevenueColor(slotProps.data.revenue) }">
                             {{ slotProps.data.revenue }}
                         </span>
                     </template>
                 </Column>
                 <Column header="Rating">
                     <template #body="slotProps">
-                        <span class="mono-data" style="color: var(--warning);">
+                        <span style="color: var(--warning);">
                             ★ {{ slotProps.data.rating }}
                         </span>
                     </template>
                 </Column>
                 <Column header="Attendance">
                     <template #body="slotProps">
-                        <span class="mono-data" :style="{ color: getAttendanceColor(slotProps.data.attendance) }">
+                        <span :style="{ color: getAttendanceColor(slotProps.data.attendance) }">
                             {{ slotProps.data.attendance }}%
                         </span>
                     </template>

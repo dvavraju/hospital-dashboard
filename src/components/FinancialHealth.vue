@@ -263,7 +263,7 @@ onMounted(() => {
                 <DataTable v-else :value="accountsReceivable" paginator :rows="4" responsiveLayout="scroll" class="p-datatable-sm">
                     <Column field="name" header="Patient/Corp"></Column>
                     <Column field="insurer" header="Insurer"></Column>
-                    <Column field="amount" header="Amount" class="mono-data"></Column>
+                    <Column field="amount" header="Amount"></Column>
                     <Column field="days" header="Days O/S"></Column>
                     <Column header="Status">
                         <template #body="slotProps">

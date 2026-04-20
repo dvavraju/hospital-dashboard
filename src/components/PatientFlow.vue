@@ -241,13 +241,13 @@ onMounted(() => {
                 <div v-if="loading"><Skeleton width="100%" height="250px" /></div>
                 <DataTable v-else :value="branchData" responsiveLayout="scroll" class="p-datatable-sm">
                     <Column field="name" header="Branch"></Column>
-                    <Column field="opd" header="OPD" class="mono-data"></Column>
-                    <Column field="ipd" header="IPD" class="mono-data"></Column>
-                    <Column field="revenue" header="Revenue" class="mono-data"></Column>
-                    <Column field="waitTime" header="Avg Wait" class="mono-data"></Column>
+                    <Column field="opd" header="OPD"></Column>
+                    <Column field="ipd" header="IPD"></Column>
+                    <Column field="revenue" header="Revenue"></Column>
+                    <Column field="waitTime" header="Avg Wait"></Column>
                     <Column field="satisfaction" header="Satisfaction">
                         <template #body="slotProps">
-                            <span class="mono-data" :style="{ color: slotProps.data.satisfaction >= 4 ? 'var(--success)' : 'var(--warning)' }">
+                            <span :style="{ color: slotProps.data.satisfaction >= 4 ? 'var(--success)' : 'var(--warning)' }">
                                 {{ slotProps.data.satisfaction }}/5
                             </span>
                         </template>

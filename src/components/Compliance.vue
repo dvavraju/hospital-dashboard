@@ -113,7 +113,7 @@ onMounted(() => {
                 <div v-else>
                     <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">Medico-legal Flags</div>
                     <div style="display: flex; align-items: center; gap: 12px; margin-top: 0.5rem;">
-                        <span style="font-size: 2rem; font-weight: 700; color: var(--danger);" class="mono-data">3</span>
+                        <span style="font-size: 2rem; font-weight: 700; color: var(--danger);">3</span>
                         <Badge value="Open" severity="danger" />
                     </div>
                     <span class="text-danger" style="font-size: 0.75rem; margin-top: 4px;">Requires attention</span>
@@ -149,12 +149,12 @@ onMounted(() => {
                     </Column>
                     <Column header="Score">
                         <template #body="slotProps">
-                            <span class="mono-data" :style="{ color: slotProps.data.score >= 80 ? 'var(--success)' : slotProps.data.score >= 70 ? 'var(--warning)' : 'var(--danger)' }">
+                            <span :style="{ color: slotProps.data.score >= 80 ? 'var(--success)' : slotProps.data.score >= 70 ? 'var(--warning)' : 'var(--danger)' }">
                                 {{ slotProps.data.score }}%
                             </span>
                         </template>
                     </Column>
-                    <Column field="lastAudit" header="Last Audit" class="mono-data"></Column>
+                    <Column field="lastAudit" header="Last Audit"></Column>
                 </DataTable>
             </template>
         </Card>
@@ -169,7 +169,7 @@ onMounted(() => {
                         <div class="timeline-content">
                             <div style="display: flex; justify-content: space-between; align-items: center;">
                                 <span style="font-weight: 600; font-size: 0.9rem;">{{ item.event }}</span>
-                                <span class="mono-data text-muted" style="font-size: 0.75rem;">{{ item.date }}</span>
+                                <span class="text-muted" style="font-size: 0.75rem;">{{ item.date }}</span>
                             </div>
                             <div style="display: flex; gap: 8px; margin-top: 4px;">
                                 <Tag :value="item.type" style="font-size: 0.65rem; background: rgba(255,255,255,0.05); color: var(--text-muted);" />

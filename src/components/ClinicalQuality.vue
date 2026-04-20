@@ -273,7 +273,7 @@ onMounted(() => {
         <template #content>
             <div v-if="loading"><Skeleton width="100%" height="300px" /></div>
             <DataTable v-else :value="incidents" paginator :rows="5" responsiveLayout="scroll" class="p-datatable-sm">
-                <Column field="date" header="Date" class="mono-data"></Column>
+                <Column field="date" header="Date"></Column>
                 <Column field="type" header="Type"></Column>
                 <Column field="dept" header="Department"></Column>
                 <Column header="Severity">

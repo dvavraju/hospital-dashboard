@@ -199,25 +199,25 @@ onUnmounted(() => {
         <div class="global-summary-strip">
             <div class="strip-chip">
                 <span class="strip-label">Total Revenue</span>
-                <span class="mono-data strip-value">₹4.2Cr</span>
+                <span class="strip-value">₹4.2Cr</span>
                 <i class="pi pi-arrow-up" style="font-size: 0.65rem; color: var(--success);"></i>
             </div>
             <div class="strip-chip">
                 <span class="strip-label">Bed Occupancy</span>
-                <span class="mono-data strip-value">78%</span>
+                <span class="strip-value">78%</span>
             </div>
             <div class="strip-chip">
                 <span class="strip-label">OPD Today</span>
-                <span class="mono-data strip-value">342</span>
+                <span class="strip-value">342</span>
             </div>
             <div class="strip-chip">
                 <span class="strip-label">Denial Rate</span>
-                <span class="mono-data strip-value" style="color: var(--warning);">4.2%</span>
+                <span class="strip-value" style="color: var(--warning);">4.2%</span>
                 <i class="pi pi-exclamation-triangle" style="font-size: 0.65rem; color: var(--warning);"></i>
             </div>
             <div class="strip-chip">
                 <span class="strip-label">Open Alerts</span>
-                <span class="mono-data strip-value" style="color: var(--danger);">3</span>
+                <span class="strip-value" style="color: var(--danger);">3</span>
                 <i class="pi pi-circle-fill" style="font-size: 0.4rem; color: var(--danger);"></i>
             </div>
         </div>
