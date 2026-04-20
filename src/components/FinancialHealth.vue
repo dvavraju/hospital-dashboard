@@ -153,8 +153,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading" ><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">GROSS REVENUE</div>
-                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">₹6.8 Cr</div>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">Gross Revenue</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;">₹6.8 Cr</div>
                     <div style="display: flex; align-items: center; justify-content: space-between;">
                         <span class="text-success" style="font-size: 0.8rem;"><i class="pi pi-arrow-up"></i> 4.2%</span>
                         <span class="text-muted" style="font-size: 0.75rem;">Target: ₹7.0 Cr</span>
@@ -167,8 +167,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading" ><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">NET REVENUE</div>
-                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">₹4.2 Cr</div>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">Net Revenue</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;">₹4.2 Cr</div>
                     <div style="display: flex; align-items: center; justify-content: space-between;">
                         <span class="text-muted" style="font-size: 0.8rem;">After deductions</span>
                     </div>
@@ -180,8 +180,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading" ><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">COLLECTIONS</div>
-                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">₹3.9 Cr</div>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">Collections</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;">₹3.9 Cr</div>
                     <div style="display: flex; align-items: center; justify-content: space-between;">
                         <span class="text-success" style="font-size: 0.8rem;">Eff: 92.8%</span>
                     </div>
@@ -193,8 +193,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">ACCOUNTS REC.</div>
-                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">₹1.4 Cr</div>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">Accounts REC.</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;">₹1.4 Cr</div>
                     <div style="display: flex; gap: 8px; flex-wrap: wrap;">
                         <span style="font-size: 0.72rem; color: var(--success);">&lt;30d</span>
                         <span style="font-size: 0.72rem; color: var(--warning);">30-60d</span>
@@ -209,8 +209,8 @@ onMounted(() => {
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else style="display: flex; align-items: flex-start; justify-content: space-between;">
                     <div>
-                        <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">DENIAL RATE</div>
-                        <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0; color: var(--danger);" class="mono-data">4.2%</div>
+                        <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">Denial Rate</div>
+                        <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0; color: var(--danger);">4.2%</div>
                         <div class="text-muted" style="font-size: 0.72rem;">Bench: &lt;3%</div>
                     </div>
                     <Knob v-model="claimDenialValue" :min="0" :max="10" readonly valueColor="var(--danger)" rangeColor="var(--surface-border)" :size="48" :strokeWidth="8" />
@@ -222,8 +222,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">OUTSTANDING DUES</div>
-                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">₹48 L</div>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">Outstanding Dues</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;">₹48 L</div>
                     <div style="display: flex; align-items: center; justify-content: space-between;">
                         <span class="text-muted" style="font-size: 0.75rem;">Ins / Corp / Pat</span>
                     </div>

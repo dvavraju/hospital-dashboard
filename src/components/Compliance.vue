@@ -68,7 +68,7 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="5rem" /></div>
                 <div v-else style="text-align: center;">
-                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500; margin-bottom: 8px;">NABH READINESS</div>
+                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500; margin-bottom: 8px;">NABH Readiness</div>
                     <div class="compliance-ring">
                         <svg viewBox="0 0 36 36" width="80" height="80">
                             <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -87,8 +87,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="5rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">CONSENT COMPLETION</div>
-                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.5rem 0;" class="mono-data">94.2%</div>
+                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">Consent Completion</div>
+                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.5rem 0;">94.2%</div>
                     <ProgressBar :value="consentRate" :showValue="false" style="height: 6px; background: var(--surface-border);" />
                     <span class="text-warning" style="font-size: 0.75rem; margin-top: 4px;">⚠ Target: 100%</span>
                 </div>
@@ -99,8 +99,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="5rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">AUDIT COMPLETION</div>
-                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.5rem 0;" class="mono-data">8 / 10</div>
+                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">Audit Completion</div>
+                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.5rem 0;">8 / 10</div>
                     <ProgressBar :value="auditsDone" :showValue="false" style="height: 6px; background: var(--surface-border);" />
                     <span class="text-muted" style="font-size: 0.75rem; margin-top: 4px;">This quarter</span>
                 </div>
@@ -111,7 +111,7 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="5rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">MEDICO-LEGAL FLAGS</div>
+                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">Medico-legal Flags</div>
                     <div style="display: flex; align-items: center; gap: 12px; margin-top: 0.5rem;">
                         <span style="font-size: 2rem; font-weight: 700; color: var(--danger);" class="mono-data">3</span>
                         <Badge value="Open" severity="danger" />
@@ -125,8 +125,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="5rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">DIGITAL COMPLIANCE</div>
-                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.5rem 0; color: var(--warning);" class="mono-data">72%</div>
+                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">Digital Compliance</div>
+                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.5rem 0; color: var(--warning);">72%</div>
                     <ProgressBar :value="digitalCompliance" :showValue="false" style="height: 6px; background: var(--surface-border);" />
                     <span class="text-warning" style="font-size: 0.75rem; margin-top: 4px;">HL7/ABDM</span>
                 </div>

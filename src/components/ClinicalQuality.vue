@@ -158,8 +158,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">HAI RATE</div>
-                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0; color: var(--danger);" class="mono-data">1.2%</div>
+                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">HAI Rate</div>
+                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0; color: var(--danger);">1.2%</div>
                     <span class="text-danger" style="font-size: 0.75rem;">🔴 Bench: &lt;1%</span>
                 </div>
             </template>
@@ -169,8 +169,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">SURGICAL MORTALITY</div>
-                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">0.8%</div>
+                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">Surgical Mortality</div>
+                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0;">0.8%</div>
                     <span class="text-success" style="font-size: 0.75rem;">✅ Bench: &lt;1%</span>
                 </div>
             </template>
@@ -180,8 +180,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">COMPLICATION RATE</div>
-                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0; color: var(--warning);" class="mono-data">2.1%</div>
+                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">Complication Rate</div>
+                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0; color: var(--warning);">2.1%</div>
                     <span class="text-warning" style="font-size: 0.75rem;">⚠ Target: &lt;2%</span>
                 </div>
             </template>
@@ -191,8 +191,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">MED ERROR RATE</div>
-                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">0.3</div>
+                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">Med Error Rate</div>
+                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0;">0.3</div>
                     <span class="text-success" style="font-size: 0.75rem;">✅ <i class="pi pi-arrow-down"></i> per 100 pts</span>
                 </div>
             </template>
@@ -202,8 +202,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">FALL RATE</div>
-                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">0.9</div>
+                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">Fall Rate</div>
+                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0;">0.9</div>
                     <span class="text-success" style="font-size: 0.75rem;">✅ per 1000 bed-days</span>
                 </div>
             </template>
@@ -213,8 +213,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">30-DAY READMISSION</div>
-                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0; color: var(--warning);" class="mono-data">6.2%</div>
+                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">30-day Readmission</div>
+                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0; color: var(--warning);">6.2%</div>
                     <span class="text-warning" style="font-size: 0.75rem;">⚠ Target: &lt;5%</span>
                 </div>
             </template>

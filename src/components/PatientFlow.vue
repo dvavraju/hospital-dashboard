@@ -159,8 +159,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">DAILY INFLOW</div>
-                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">412</div>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">Daily Inflow</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;">412</div>
                     <span class="text-success" style="font-size: 0.8rem;"><i class="pi pi-arrow-up"></i> 7-day trend ↑</span>
                 </div>
             </template>
@@ -170,8 +170,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">ADMISSIONS</div>
-                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">28</div>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">Admissions</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;">28</div>
                     <span class="text-muted" style="font-size: 0.8rem;">vs 7d avg: 31</span>
                 </div>
             </template>
@@ -181,8 +181,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">DISCHARGES</div>
-                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">31</div>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">Discharges</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;">31</div>
                     <span class="text-warning" style="font-size: 0.8rem;">Pending: 6</span>
                 </div>
             </template>
@@ -192,8 +192,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">NO-SHOW RATE</div>
-                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0; color: var(--warning);" class="mono-data">8.4%</div>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">No-show Rate</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0; color: var(--warning);">8.4%</div>
                     <span class="text-warning" style="font-size: 0.8rem;">⚠ Bench: &lt;5%</span>
                 </div>
             </template>
@@ -203,8 +203,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">30-DAY READMISSION</div>
-                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0; color: var(--warning);" class="mono-data">6.2%</div>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">30-day Readmission</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0; color: var(--warning);">6.2%</div>
                     <span class="text-warning" style="font-size: 0.8rem;">⚠ Target: &lt;5%</span>
                 </div>
             </template>

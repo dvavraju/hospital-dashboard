@@ -152,8 +152,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">BED OCCUPANCY</div>
-                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0; color: var(--accent-primary);" class="mono-data">{{ bedOccupancy }}<span style="font-size: 0.9rem; color: var(--text-muted);">%</span></div>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">Bed Occupancy</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0; color: var(--accent-primary);">{{ bedOccupancy }}<span style="font-size: 0.9rem; color: var(--text-muted);">%</span></div>
                     <div style="display: flex; align-items: center; justify-content: space-between;">
                         <span class="text-muted" style="font-size: 0.75rem;">Target: 85%</span>
                     </div>
@@ -165,8 +165,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">AVG LENGTH OF STAY</div>
-                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">3.8 <span style="font-size: 0.9rem; color: var(--text-muted);">Days</span></div>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">Avg Length Of Stay</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;">3.8 <span style="font-size: 0.9rem; color: var(--text-muted);">Days</span></div>
                     <div style="display: flex; align-items: center; justify-content: space-between;">
                         <span class="text-warning" style="font-size: 0.8rem;"><i class="pi pi-arrow-up"></i> 0.3d</span>
                         <span class="text-muted" style="font-size: 0.75rem;">Bench: 3.5d</span>
@@ -179,8 +179,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">OT UTILIZATION</div>
-                    <div style="font-size: 1.5rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">72%</div>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">OT Utilization</div>
+                    <div style="font-size: 1.5rem; font-weight: 600; margin: 0.25rem 0;">72%</div>
                     <ProgressBar :value="otUtilization" :showValue="false" style="height: 6px; background: var(--surface-border);" />
                     <span class="text-muted" style="font-size: 0.75rem; margin-top: 4px;">Target: 80%</span>
                 </div>
@@ -191,8 +191,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">OPD VOLUME TODAY</div>
-                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">342</div>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">OPD Volume Today</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;">342</div>
                     <div style="display: flex; align-items: center; justify-content: space-between;">
                         <span class="text-success" style="font-size: 0.8rem;"><i class="pi pi-arrow-up"></i> vs 318</span>
                         <span class="text-muted" style="font-size: 0.75rem;">Yesterday</span>
@@ -205,8 +205,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">IPD ADMISSIONS</div>
-                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">28</div>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">IPD Admissions</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0;">28</div>
                     <div style="display: flex; align-items: center; justify-content: space-between;">
                         <span class="text-warning" style="font-size: 0.8rem;"><i class="pi pi-arrow-down"></i> vs 31 avg</span>
                         <span class="text-muted" style="font-size: 0.75rem;">7-day</span>
@@ -219,8 +219,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">ER WAIT TIME</div>
-                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0; color: var(--warning);" class="mono-data">18 <span style="font-size: 0.9rem; color: var(--text-muted);">min</span></div>
+                    <div class="text-muted" style="font-size: 0.85rem; font-weight: 500;">ER Wait Time</div>
+                    <div style="font-size: 1.8rem; font-weight: 600; margin: 0.25rem 0; color: var(--warning);">18 <span style="font-size: 0.9rem; color: var(--text-muted);">min</span></div>
                     <div style="display: flex; align-items: center; justify-content: space-between;">
                         <span class="text-warning" style="font-size: 0.8rem;">⚠ Target: &lt;15m</span>
                     </div>

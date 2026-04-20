@@ -125,8 +125,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">ACTIVE DOCTORS</div>
-                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">34 <span style="font-size: 0.9rem; color: var(--text-muted);">/ 40</span></div>
+                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">Active Doctors</div>
+                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0;">34 <span style="font-size: 0.9rem; color: var(--text-muted);">/ 40</span></div>
                     <span class="text-warning" style="font-size: 0.75rem;">⚠ 6 absent today</span>
                 </div>
             </template>
@@ -136,8 +136,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">NURSING UTILIZATION</div>
-                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">88%</div>
+                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">Nursing Utilization</div>
+                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0;">88%</div>
                     <span class="text-success" style="font-size: 0.75rem;">✅ Bench: 85%</span>
                 </div>
             </template>
@@ -147,8 +147,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">STAFF OVERTIME</div>
-                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0; color: var(--warning);" class="mono-data">312 <span style="font-size: 0.85rem; color: var(--text-muted);">hrs</span></div>
+                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">Staff Overtime</div>
+                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0; color: var(--warning);">312 <span style="font-size: 0.85rem; color: var(--text-muted);">hrs</span></div>
                     <span class="text-warning" style="font-size: 0.75rem;">⚠ Budget: 280 hrs</span>
                 </div>
             </template>
@@ -158,8 +158,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">OPEN POSITIONS</div>
-                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0; color: var(--danger);" class="mono-data">7</div>
+                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">Open Positions</div>
+                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0; color: var(--danger);">7</div>
                     <span class="text-muted" style="font-size: 0.75rem;">ICU, OT, Radiology</span>
                 </div>
             </template>
@@ -169,8 +169,8 @@ onMounted(() => {
             <template #content>
                 <div v-if="loading"><Skeleton width="100%" height="4rem" /></div>
                 <div v-else>
-                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">EMPLOYEE SATISFACTION</div>
-                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0;" class="mono-data">74 <span style="font-size: 0.85rem; color: var(--text-muted);">/ 100</span></div>
+                    <div class="text-muted" style="font-size: 0.8rem; font-weight: 500;">Employee Satisfaction</div>
+                    <div style="font-size: 1.7rem; font-weight: 600; margin: 0.25rem 0;">74 <span style="font-size: 0.85rem; color: var(--text-muted);">/ 100</span></div>
                     <span class="text-muted" style="font-size: 0.75rem;">Monthly pulse</span>
                 </div>
             </template>
